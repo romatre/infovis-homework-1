@@ -1,0 +1,40 @@
+{
+  "name": "invovis-hw-1",
+  "version": "1.0.0",
+  "description": "Primo progetto di infovis",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode=development",
+    "build": "rm -rf dist && mkdir dist && webpack --mode=production",
+    "deploy": "npm run build && rm -rf /keybase/public/menxit/infovis-hw-1 && cp -rf ./dist /keybase/public/menxit/infovis-hw-1 && echo \"Go to ==> https://menxit.keybase.pub/infovis-hw-1/\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romatre/invovis-hw-1.git"
+  },
+  "author": "Federico Ginosa <federico@menxit.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romatre/invovis-hw-1/issues"
+  },
+  "homepage": "https://github.com/romatre/invovis-hw-1#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.0.6",
+    "image-webpack-loader": "^4.1.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "d3": "^5.0.0",
+    "svg-path-properties": "^0.4.2"
+  }
+}
