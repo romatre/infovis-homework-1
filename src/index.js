@@ -16,6 +16,12 @@ let state = actions.appendAircraft(root, {
   meters: 0,
 });
 
+const istruzioni = root.append('div').attr('id', 'istruzioni').append('div');
+istruzioni.append('p').text('Per muovere l\'areoplanino utilizza i tasti direzione della tastiera.');
+const istruzioniH2 = istruzioni.append('h2');
+istruzioniH2.append('span').attr('id', 'metri').text('0');
+istruzioniH2.append('span').text(' metri percorsi');
+
 root.append('audio').attr('id', 'sound').append('source').attr('src', sound);
 
 ['Up', 'Right', 'Down', 'Left'].forEach(direction => keypress[`onKey${direction}`](() => {
